@@ -25,15 +25,15 @@ function App() {
     timelineFinish: new Date(2020, 7, 1)
   };
 
-  function onItemPropertyChanged(item: any, propertyName: string, isDirect: boolean, isFinal: boolean) {
-    console.log(propertyName + " changed for " + item.content);
+  function onItemChanged(item: any, propertyName: string, isDirect: boolean, isFinal: boolean) {
+    console.log(propertyName + ' changed for ' + item.content + '.');
   }
 
   var props: GanttChartViewProps = { 
      items: items,
      settings: settings,
-     change: onItemPropertyChanged,
-     style: { height: "388px" }
+     change: onItemChanged,
+     style: { height: '388px' }
   };
 
   return (
